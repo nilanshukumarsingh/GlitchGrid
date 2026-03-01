@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GlitchGrid</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Orbitron:wght@500;700;900&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              skin: {
+                base: "var(--color-bg)",
+                primary: "var(--color-primary)",
+                secondary: "var(--color-secondary)",
+                accent: "var(--color-accent)",
+                text: "var(--color-text)",
+                muted: "var(--color-muted)",
+              },
+            },
+            fontFamily: {
+              cyber: ["Orbitron", "sans-serif"],
+              glass: ["Inter", "sans-serif"],
+              retro: ['"Press Start 2P"', "cursive"],
+            },
+            backgroundImage: {
+              "glass-gradient": "var(--bg-gradient)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Global transitions for theme switching */
+      :root {
+        transition:
+          background-color 0.5s ease,
+          color 0.5s ease;
+      }
+      body {
+        margin: 0;
+        overflow-x: hidden;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "react/": "https://aistudiocdn.com/react@^19.2.0/",
+          "react": "https://aistudiocdn.com/react@^19.2.0",
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+          "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+          "howler": "https://aistudiocdn.com/howler@^2.2.4"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

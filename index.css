@@ -1,0 +1,56 @@
+/* GlitchGrid — Global Styles */
+
+:root {
+  --color-bg: #050505;
+  --color-primary: #0ea5e9;
+  --color-secondary: #d946ef;
+  --color-accent: #22d3ee;
+  --color-text: #ffffff;
+  --color-muted: #1f2937;
+  --color-primary-rgb: 14, 165, 233;
+  --color-secondary-rgb: 217, 70, 239;
+  --color-accent-rgb: 34, 211, 238;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-muted);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Selection colors */
+::selection {
+  background-color: var(--color-primary);
+  color: #000;
+}
